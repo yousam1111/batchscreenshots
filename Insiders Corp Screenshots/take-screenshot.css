@@ -1,0 +1,11 @@
+html, body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 14px;
+  display: block;
+  margin: 8px;
+}
+
+#finished-screenshot {
+  max-width: calc(100% - 10px);
+  border: 5px solid red;
+}

@@ -1,0 +1,8 @@
+{
+  "name": {
+    "message": "Open Multiple URLs"
+  },
+  "description":{
+    "message": "Open Multiple URLs in new tabs."
+  }
+}

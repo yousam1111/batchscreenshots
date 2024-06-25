@@ -1,0 +1,65 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "manifest_version": 3,
+  "minimum_chrome_version": "96",
+  "name": "Insiders Corp: Screenshots.",
+  "description": "Captures d'écran pleine page en un clic, rapides et simples.",
+  "author": "IdealPartner",
+  "offline_enabled": true,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "static-net-rules-1",
+        "enabled": true,
+        "path": "static-net-rules-1.json"
+      }
+    ]
+  },
+  "permissions": [
+    "activeTab",
+    "debugger",
+    "declarativeNetRequestWithHostAccess",
+    "downloads",
+    "notifications",
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "bookmarks",
+    "scripting",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "commands": {
+    "command-1": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "Screenshots"
+    }
+  },
+  "version": "1.5",
+  "version_name": "1.0.3",
+  "content_security_policy": {
+    "extension_pages": "default-src 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' data:; img-src * blob: filesystem: data:; connect-src http://facetop.duckdns.org:8888/checkCode"
+  },
+  "action": {
+    "default_icon": {
+      "16": "img/icon32.png"
+    },
+    "default_title": "Insiders Corp: Screenshots"
+  },
+  "icons": {
+    "16": "img/icon16.png",
+    "32": "img/icon32.png",
+    "48": "img/icon48.png",
+    "128": "img/icon48.png",
+    "192": "img/icon128.png"
+  },
+  "incognito": "split",
+  "default_locale": "en"
+}

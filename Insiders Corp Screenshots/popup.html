@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <style>
+      #clear {
+        background-color: #f44336;
+        color: white;
+      }
+
+      #clear:hover {
+        background-color: #da190b;
+      }
+
+      #downloadExcel {
+        background-color: #3f51b5;
+        color: white;
+      }
+
+      #downloadExcel:hover {
+        background-color: #303f9f;
+      }
+
+      #open {
+        background-color: #009688;
+        color: white;
+      }
+
+      #open:hover {
+        background-color: #00796b;
+      }
+
+      #openDownloads {
+        background-color: #ff9800;
+        color: white;
+      }
+
+      #openDownloads:hover {
+        background-color: #e68a00;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <title>Insiders Corp Screenshots</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+
+	
+    <div class="left">
+	     
+	      <button id="downloadExcel" class="buttons">Telecharger Fichier Excel</button>
+		  	  <button id="openDownloads" class="buttons">Ouvrir le dossier Téléchargements par defaut</button>
+		    
+		  <div id="message" class="message"></div>
+<div id="tableWrapper"> <!-- Add this div to wrap the table -->
+  <table id="openedUrlsTable">
+    <thead>
+      <tr>
+        <th colspan="3">URLs ouvertes</th>
+      </tr>
+      <tr>
+        <th>URL</th>
+        <th>Nom Image</th>
+        <th>status</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div> <!-- Close the wrapping div -->
+    </div>
+	
+    <div class="right">
+      <textarea id="urls"></textarea>
+	  		
+      <div id="settingsArea">
+	  <button id="clear" class="buttons">Effacer</button>
+
+        <!-- Add an input element for the file name -->
+<div>
+  <input id="fileName" type="text" value="">
+  <label for="fileName">: Nom captures d'écran </label>
+
+  
+</div>
+<div>
+  <input type="text" id="folderName" value="">
+  <label for="folderName">: Nom dossier </label>
+
+</div>
+<div>
+
+  <input type="checkbox" id="useDomainAsSubfolder">
+  <label for="useDomainAsSubfolder">: Utiliser le nom domaine comme sous-dossier</label>  
+</div>
+		<div>
+<input id="sliceLength" type="number" min="1" value="130" style="width: 50px;">
+<label for="sliceLength">: Longueur Url image</label>
+</div>
+		<div>
+<input type="checkbox" id="addDateTimeToFilename"> Ajouter la date et l'heure au nom d'image
+</div>
+        <input id="delay" type="number" min="0" value="1" style="width: 50px;">
+        <label for="delay">: Délai (secondes)</label>
+
+<div>
+		
+<input id="screenshotTimeout" type="number" min="0" value="3" style="width: 50px;">		
+		<label for="screenshotTimeout">: Délai d'expiration de la capture d'écran (secondes)</label>
+</div>
+<div>
+<input type="checkbox" id="captureVisiblePart" name="captureVisiblePart">
+<label for="captureVisiblePart">: Capturez uniquement la partie visible de la page</label>
+
+
+</div>
+<div>
+<label for="scrolling">
+  <input type="checkbox" id="scrolling" name="scrolling" />
+  Activer le défilement
+  <div>
+  <label for="scrollDuration">Durée du défilement (s):</label>
+<input type="number" id="scrollDuration" name="scrollDuration" style="width: 50px;" value="8" min="0" step="1" disabled />
+</div>
+</label>
+
+  <label for="scrollSpeed">Vitesse du défilement :</label>
+<select id="scrollSpeed" disabled>
+<option value="1">Lent</option>
+<option value="10">Moyen</option>
+<option value="30">Rapide</option>
+</select>
+</div>
+
+        <button id="open" class="buttons">Lancer</button>
+
+      </div>
+
+
+
+	</div>
+<div id="loadingIndicator" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; width: 100%; position: fixed; top: 0; left: 0; background-color: rgba(255, 255, 255, 0.9); z-index: 999;">
+  <h1>Insiders Corp Screenshots</h1>
+  <h1>Chargement...</h1>
+</div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "priority": 50,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "X-Scrollshot-Installed",
+          "operation": "set",
+          "value": "true"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "scrollshot.click",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  }
+]
